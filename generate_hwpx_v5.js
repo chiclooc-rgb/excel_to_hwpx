@@ -177,6 +177,13 @@ function modifyXml(xml, personData) {
         result = modifyCell(result, mod.row, mod.cell, mod.value);
     }
 
+    // 하단 서명란 "성명" → 실제 이름으로 변경
+    // "신청인       성명      (인)" → "신청인       홍길동      (인)"
+    result = result.replace(
+        /신청인\s+성명\s+\(인\)/,
+        `신청인       ${personData.성명}      (인)`
+    );
+
     return result;
 }
 
