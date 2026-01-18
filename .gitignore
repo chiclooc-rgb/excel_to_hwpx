@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Output files
+output/
+
+# Temp files
+*.zip
+*_extracted/
+
+# Excel backup
+~$*.xlsx
+
+# OS files
+.DS_Store
+Thumbs.db
